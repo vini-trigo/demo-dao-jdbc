@@ -1,10 +1,7 @@
 package app;
 
-import java.util.Date;
-
-import com.mysql.fabric.xmlrpc.base.Data;
-
-import model.entities.Department;
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Seller;
 
 public class program {
@@ -12,9 +9,9 @@ public class program {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Department obj = new Department(1, "books");
+		SellerDao dao = DaoFactory.createSellerDao();
 		
-		Seller seler = new Seller(22, "Onildo", "alou", new Date(), 3000.0, obj);
+		Seller seler = dao.findyById(2);
 		
 		System.out.println(seler);
 	}
