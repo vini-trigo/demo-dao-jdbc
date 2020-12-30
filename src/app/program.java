@@ -14,9 +14,9 @@ public class program {
 
 		Department obj = new Department(1, "books");
 		
-		Seller seler = new Seller(22, "Onildo", "alou", new Date(), 3000, obj);
+		Seller seler = new Seller(22, "Onildo", "alou", new Date(), 3000.0, obj);
 		
-		System.out.println(obj);
+		System.out.println(seler);
 	}
 
 }
